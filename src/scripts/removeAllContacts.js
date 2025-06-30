@@ -4,11 +4,8 @@ import { readContacts } from "../utils/readContacts.js";
 export const removeAllContacts = async () => {
     try {
         await writeContacts([]);
-        const data = await readContacts()
-        console.log('File is empty now: ', data);
-
+        await readContacts();
     } catch (error) {
-        console.log(error);
     }
 };
 
